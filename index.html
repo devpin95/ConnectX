@@ -14,13 +14,14 @@
 
 <script src="js/calculations.js"></script>
 <script src="js/gamePieces.js"></script>
+<script src="scenes/connect4_scene.js"></script>
 <script src="scenes/_default_scene.js"></script>
 <script src="js/GLOBALS.js"></script>
 <script>
 	function startGame() {
 		myBlock = new block( 100, 50, "", 100, 100, "image" );
 
-        GAME_STATE.change_scene( SCENES.DEFAULT_SCENE );
+        GAME_STATE.change_scene( SCENES.CONNECT4_SCENE );
 
 		myGameArea.start( );
 	}
