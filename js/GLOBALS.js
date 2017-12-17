@@ -1,6 +1,10 @@
 //global values
-var g_width = 960
-var g_height = 540
+var w = window;
+var d = document;
+var e = d.documentElement;
+var g = d.getElementsByTagName('body')[0];
+var g_width =  w.innerWidth || e.clientWidth || g.clientWidth;
+var g_height = w.innerHeight|| e.clientHeight|| g.clientHeight;
 // game frames per second
 var g_fps = 1000/50; //50 fps
 
@@ -9,7 +13,8 @@ var SCENES = {
 	// setup must initialize the scene
 	// run will be the scenes main logic loop
 	// each scene must also have a scene_ready bool (true=setup, false=not yet setup)
-	DEFAULT_SCENE: default_scene
+	DEFAULT_SCENE: default_scene,
+	CONNECT4_SCENE: connect4_scene
 };
 
 //game states
